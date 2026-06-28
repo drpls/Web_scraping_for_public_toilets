@@ -57,7 +57,7 @@ Prima di costruire l'intera pipeline, il progetto prevede l'esecuzione obbligato
 ### Installazione Rapida
 
 ```bash
-cd ALESSIAAAA
+cd Web_scraping_public_toilets
 
 # Installa le dipendenze Python
 pip install playwright aiosqlite pandas pydantic structlog rich pytest pytest-asyncio
@@ -121,7 +121,7 @@ Il database è memorizzato in `data/restrooms.db` e contiene due tabelle:
 ## 7. Struttura del Progetto
 
 ```text
-ALESSIAAAA/
+Web_scraping_public_toilets/
 ├── pyproject.toml              # Configurazione di build e dipendenze
 ├── config.py                   # Configurazione (città, termini di ricerca, ritardi)
 ├── models.py                   # Schemi Pydantic v2 (PublicRestroom, Review)
