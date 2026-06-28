@@ -33,12 +33,12 @@ class CityConfig(BaseModel):
 # false positives. It runs on OpenRouter's free tier, so the key MUST be
 # supplied via the environment — never hardcode it here.
 OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")
-# DeepSeek V4 Flash (free) — newest free DeepSeek on OpenRouter (1M context,
-# direct successor to V3) as of 2026-06, listed free on its OpenRouter page.
-# The free roster is volatile; override via env with any other ':free' model
-# if this one stops being free.
+# NVIDIA Nemotron 3 Super (free) — MoE 120B/12B-active on OpenRouter's free tier.
+# Excellent for structured-output classification tasks. The free roster is
+# volatile; override via env with any other ':free' model if this one stops
+# being free.
 OPENROUTER_MODEL = os.environ.get(
-    "OPENROUTER_MODEL", "deepseek/deepseek-v4-flash:free"
+    "OPENROUTER_MODEL", "nvidia/nemotron-3-super-120b-a12b:free"
 )
 # Free-tier hard limit is 20 requests/minute; stay safely under it.
 OPENROUTER_RPM = float(os.environ.get("OPENROUTER_RPM", "18"))

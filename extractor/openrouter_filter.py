@@ -2,8 +2,8 @@
 
 After Phase 1 discovers candidates, many are false positives (parks, parking
 garages, train stations, etc.). This module sends the candidate list to a free
-model on OpenRouter (DeepSeek V3 by default) and gets back a structured JSON
-classification.
+model on OpenRouter (NVIDIA Nemotron 3 Super by default) and gets back a
+structured JSON classification.
 
 The free tier is capped at 20 requests/minute, so calls are paced by a simple
 RPM limiter and 429 responses are retried with exponential backoff. On any
